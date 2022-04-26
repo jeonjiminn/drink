@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>뭐먹지?</title>
+    <meta charset="utf-8">
+    <style>
+      * {margin:0; box-sizing:border-box;}
+      img {width:250px; height:200px; border:1px solid #666; margin:40px 0 20px 0;}
+
+      #wrap {width:600px; height:700px; border:5px solid #333; text-align:center; padding:30px;}
+
+      #box1 {width:100%; height:600px; background-color:tomato;}
+      #box2 {width:100%; height:600px; background-color:cyan; display:none;} 
+      #box3 {width:100%; height:600px; background-color:gray; display:none;}
+
+      .text {width:300px; height:250px; background-color:#fff; margin:10px auto; text-align:left;}
+      h1 {font-size:25px;}
+      h3 {font-size:20px; color:#666; margin:10px 0px}
+      p {font-size:15px; color:#666;}
+
+      button {padding:10px; margin:10px 20px;}
+
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+      $(document).ready(function(){
+      
+        $("button:nth-of-type(1)").click(function(){
+          $("#box1").show();
+          $("#box2").hide();
+          $("#box3").hide();
+        });
+        
+        $("button:nth-of-type(2)").click(function(){
+          $("#box2").show();
+          $("#box1").hide();
+          $("#box3").hide();
+        });
+        
+        $("button:nth-of-type(3)").click(function(){
+          $("#box3").show();
+          $("#box1").hide();
+          $("#box2").hide();
+        });
+        
+      });
+
+    </script>
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <div id="box1">
+        <img src="https://cdn.econovill.com/news/photo/201805/337727_202597_564.JPG" alt="소주">
+        <div class="text">
+          <h1>소주</h1>
+          <h3>술</h3>
+          <p>한국의 소주는 전통적으로 쌀로 증류해왔지만, 일제 강점기와 한국 전쟁 이후부터 경제 성장기에 걸쳐 감자, 밀, 보리, 고구마, 타피오카 등의 전분을 첨가한 소주가 만들어지게 되었다.</p>
+        </div>
+      </div>
+
+      <div id="box2">
+        <img src="http://health.chosun.com/site/data/img_dir/2015/08/11/2015081101302_0.jpg" alt="맥주">
+        <div class="text">
+          <h1>맥주</h1>
+          <h3>술</h3>
+          <p>맥주는 보리를 가공한 맥아를 발효한 술로서 알코올은 맥주의 종류에 따라, 2 ~ 8% 정도의 다양한 도수를 가진 술이다. 맥주의 어원은 '마신다'라는 의미의 라틴어 비베레에서 유래하였다. 맥주는 고대 문명에서 농업의 번창함을 표현한 인류학적 증거라는 견해가 있다.</p>
+        </div>    
+      </div>
+
+      <div id="box3">
+        <img src="https://t1.daumcdn.net/cfile/tistory/99AA9F445CA1F41B07" alt="양주">
+        <div class="text">
+          <h1>양주</h1>
+          <h3>술</h3>
+          <p>양주는 서양식으로 제조한 술이다.</p>
+        </div>
+      </div>
+      <button>소주</button>
+      <button>맥주</button>
+      <button>양주</button>
+    </div>
+
+  </body>
+</html>
